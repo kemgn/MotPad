@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MotPad/1.0.0": {
+        "dependencies": {
+          "PadLib": "1.0.0"
+        },
+        "runtime": {
+          "MotPad.dll": {}
+        }
+      },
+      "PadLib/1.0.0": {
+        "runtime": {
+          "PadLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MotPad/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PadLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
