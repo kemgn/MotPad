@@ -63,6 +63,16 @@ namespace MotPad.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap baseline_add_white_24dp {
+            get {
+                object obj = ResourceManager.GetObject("baseline_add_white_24dp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap content_save_all_outline {
             get {
                 object obj = ResourceManager.GetObject("content-save-all-outline", resourceCulture);

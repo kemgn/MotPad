@@ -40,14 +40,13 @@
             this.search = new System.Windows.Forms.Button();
             this.font = new System.Windows.Forms.Button();
             this.alwaysOnTop = new System.Windows.Forms.Button();
+            this.newTabButton = new System.Windows.Forms.Button();
+            this.tabButtonsContainer = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.multiPagePanel1 = new MotPad.Components.MultiPagePanel();
             this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
+            this.tabButtonsContainer.SuspendLayout();
+            this.multiPagePanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // save
@@ -78,7 +77,7 @@
             // 
             this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(18)))), ((int)(((byte)(18)))));
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.flowLayoutPanel1.Controls.Add(this.newButton);
             this.flowLayoutPanel1.Controls.Add(this.save);
             this.flowLayoutPanel1.Controls.Add(this.saveAs);
@@ -122,7 +121,6 @@
             this.font.Size = new System.Drawing.Size(32, 32);
             this.font.TabIndex = 4;
             this.font.UseVisualStyleBackColor = false;
-            this.font.Click += new System.EventHandler(this.font_Click);
             // 
             // alwaysOnTop
             // 
@@ -136,6 +134,28 @@
             this.alwaysOnTop.UseVisualStyleBackColor = false;
             this.alwaysOnTop.Click += new System.EventHandler(this.alwaysOnTop_Click);
             // 
+            // newTabButton
+            // 
+            this.newTabButton.BackColor = System.Drawing.Color.Black;
+            this.newTabButton.BackgroundImage = global::MotPad.Properties.Resources.baseline_add_white_24dp;
+            this.newTabButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.newTabButton.Location = new System.Drawing.Point(0, 0);
+            this.newTabButton.Margin = new System.Windows.Forms.Padding(0);
+            this.newTabButton.Name = "newTabButton";
+            this.newTabButton.Size = new System.Drawing.Size(32, 32);
+            this.newTabButton.TabIndex = 8;
+            this.newTabButton.UseVisualStyleBackColor = false;
+            this.newTabButton.Click += new System.EventHandler(this.newTabButton_Click);
+            // 
+            // tabButtonsContainer
+            // 
+            this.tabButtonsContainer.BackColor = System.Drawing.Color.RosyBrown;
+            this.tabButtonsContainer.Controls.Add(this.newTabButton);
+            this.tabButtonsContainer.Location = new System.Drawing.Point(12, 72);
+            this.tabButtonsContainer.Name = "tabButtonsContainer";
+            this.tabButtonsContainer.Size = new System.Drawing.Size(587, 35);
+            this.tabButtonsContainer.TabIndex = 9;
+            // 
             // richTextBox1
             // 
             this.richTextBox1.AcceptsTab = true;
@@ -145,62 +165,38 @@
             this.richTextBox1.DetectUrls = false;
             this.richTextBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.richTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(239)))), ((int)(((byte)(239)))));
-            this.richTextBox1.Location = new System.Drawing.Point(6, 6);
+            this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(925, 456);
+            this.richTextBox1.Size = new System.Drawing.Size(439, 215);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.TabStop = false;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
-            // pictureBox1
+            // multiPagePanel1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.BackColor = System.Drawing.Color.Red;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(853, 431);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.ItemSize = new System.Drawing.Size(12, 12);
-            this.tabControl1.Location = new System.Drawing.Point(12, 56);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(942, 485);
-            this.tabControl1.TabIndex = 6;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.richTextBox1);
-            this.tabPage1.Controls.Add(this.pictureBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 16);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(934, 465);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.multiPagePanel1.BackColor = System.Drawing.Color.DimGray;
+            this.multiPagePanel1.Controls.Add(this.richTextBox1);
+            this.multiPagePanel1.CurrentPageIndex = 0;
+            this.multiPagePanel1.Location = new System.Drawing.Point(12, 123);
+            this.multiPagePanel1.Name = "multiPagePanel1";
+            this.multiPagePanel1.Size = new System.Drawing.Size(668, 366);
+            this.multiPagePanel1.TabIndex = 10;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1251, 936);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.multiPagePanel1);
+            this.Controls.Add(this.tabButtonsContainer);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
+            this.tabButtonsContainer.ResumeLayout(false);
+            this.multiPagePanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -214,9 +210,9 @@
         private Button search;
         private Button font;
         private Button alwaysOnTop;
+        private Button newTabButton;
+        private Components.MultiPagePanel multiPagePanel1;
         public RichTextBox richTextBox1;
-        private TabPage tabPage1;
-        private TabControl tabControl1;
-        private PictureBox pictureBox1;
+        private Panel tabButtonsContainer;
     }
 }
